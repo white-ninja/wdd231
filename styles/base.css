@@ -1,0 +1,241 @@
+/* --------COLOR SCHEME----------
+terra cotta #E07A5F,
+deep slate blue #3D405B, */
+
+/**************** SITE WIDE STYLES ********************/
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/**************** HEADER STYLES ********************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: end;
+    padding: 5px 0px 5px 10px;
+    border-bottom: 1px solid #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3D405B;
+}
+
+/************* Hamburger Button Styles **************/
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3D405B;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    /* Unicode character for hamburger icon */
+    font-size: 2rem;
+    color: #3D405B;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    /* Unicode character for hamburger icon */
+    font-size: 2rem;
+    color: #3D405B;
+}
+
+/**************** NAVIGATION STYLES ******************/
+.navigation {
+    display: none;
+    padding: 10px 0;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #3D405B;
+    font-size: 1.1rem;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+.navigation a:hover {
+    background-color: #e07a5f;
+}
+
+/**************** MAIN STYLES ********************/
+
+
+
+h1 {
+    font-size: 1.5rem;
+    color: #3D405B;
+    margin-left: 10px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* ******************** FOOTER STYLES ******************** */
+footer {
+    text-align: center;
+    padding: 1rem 10px;
+    background-color: #eee;
+    color: #3D405B;
+    font-size: 0.9rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 5px;
+    border: #ccc solid .2px;
+    border-radius: 22px;
+
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
+
+/* Added styles for course cards and buttons */
+.course {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #3D405B;
+}
+
+.course.completed {
+    background-color: #E07A5F;
+    color: white;
+}
+
+#course-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+#course-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3D405B;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#course-buttons button:hover {
+    background-color: #E07A5F;
+}
+
+/* Layout grid for About Me and Student Photo */
+.about-photo-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin: 20px 0;
+}
+
+.about-me {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 16px;
+    border: 1px solid #ddd;
+}
+
+.student-photo {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.student-photo img {
+    border-radius: 8px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    background: #eee;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+}
+
+.certificate-section {
+    margin-top: 24px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 16px;
+    border: 1px solid #ddd;
+}
+
+.stretched {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 700px) {
+    .about-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-photo img {
+        width: 120px;
+        height: 120px;
+    }
+}

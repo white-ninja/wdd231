@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Hub</title>
+    <meta name="description"
+        content="This is the home page for the course, where you can find all the necessary information and resources.">
+    <meta name="author" content="Emmanuel Ariyo">
+
+    <!-- Style Sheet Here -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript File Here -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dynamicContent.js" defer></script>
+
+    <!-- Google Fonts Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="images/home.svg" alt="Site Icon" width="512" height="512">
+        <span>Projects Hub - Emmanuel Ariyo</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section class="about-photo-grid">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is Emmanuel Ariyo, and I am an undergraduate student pursuing a degree in Software
+                    Development.
+                    I am passionate about building modern, user-friendly web applications and continuously improving
+                    my skills
+                    in programming and web technologies. Through my coursework and personal projects, I have been
+                    learning
+                    how to develop responsive websites using HTML, CSS, and JavaScript, while also exploring tools and
+                    practices
+                    such as version control with Git and GitHub.
+
+                    This project hub serves as a collection of my coursework and experiments where I apply what I learn
+                    in class
+                    to real projects. I enjoy solving problems through code, improving user experiences, and
+                    collaborating
+                    with others to create meaningful digital solutions. As I continue my studies, my goal is to grow
+                    as a
+                    software developer and contribute to impactful software projects in the tech industry.
+                </p>
+            </section>
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile_picture.jpg" alt="Student Photo" width="180" height="180">
+            </section>
+            </div>
+            <section class="certificate-section stretched">
+                <h2>Web Certificate Courses</h2>
+                <div id="course-buttons">
+                    <button id="all-courses">All</button>
+                    <button id="cse-courses">CSE</button>
+                    <button id="wdd-courses">WDD</button>
+                </div>
+                <div id="course-list">
+                    <!-- Dynamic course list will be rendered here -->
+                </div>
+                <p>Total credits for courses listed above: <span id="total-credits">0</span></p>
+            </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/white-ninja" target="_blank" rel="noopener noreferrer"><img
+                    src="images/github.svg" alt="GitHub" width="16" height="16"></a>
+            <a href="www.linkedin.com/in/emmanuel-ariyo-333789112" target="_blank" rel="noopener noreferrer"><img
+                    src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://x.com/AriyoLeap?s=09" target="_blank" rel="noopener noreferrer"><img
+                    src="images/twitter-x.svg" alt="Twitter" width="16" height="16"></a>
+            <a href="https://discord.com/users/1450887330113261690" target="_blank" rel="noopener noreferrer"><img
+                    src="images/discord.svg" alt="Discord" width="16" height="16"></a>
+            <a href="https://web.facebook.com/ariyo.dominic/" target="_blank" rel="noopener noreferrer"><img
+                    src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Emmanuel Ariyo, Nigeria</p>
+        <p id="lastModified">Last Updated: </p>
+    </footer>
+</body>
+
+</html>
