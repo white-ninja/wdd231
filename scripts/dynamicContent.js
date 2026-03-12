@@ -8,7 +8,7 @@ document.getElementById("current-year").textContent = currentYear;
 const lastModified = document.lastModified;
 document.getElementById("lastModified").textContent = `Last Updated: ${lastModified}`;
 
-// Course List Array
+// Course List Array.
 const courses = [
     {
         subject: 'CSE',
