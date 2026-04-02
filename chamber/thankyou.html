@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <meta name="description" content="Thank you for joining the OtaCity Chamber of Commerce. We look forward to working with you.">
+    <meta name="author" content="Emmanuel Adejare Ariyo">
+
+     <!-- Favicon -->   
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <!-- Open Graph (Facebook) -->  
+    <meta property="og:title" content="OtaCity Chamber Member Directory">
+    <meta property="og:description"
+        content="Browse local businesses that support our community through the Chamber of Commerce.">  
+    <meta property="og:image" content="https://white-ninja.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Google Fonts Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+    <!-- Thank You page JS -->
+    <script src="scripts/thankyou.js" defer></script>
+    <!-- Home page JS -->
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="page">
+        <div class="branding">
+            <a class="brand" href="index.html">
+                <img class="brand__logo" src="images/favicon.svg" alt="OtaCity Chamber logo" width="48" height="48">
+                <span class="brand__name">OtaCity Chamber</span>
+            </a>
+            <p class="brand__tagline">Connecting local businesses and our community</p>
+        </div>
+
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+
+            <ul id="primary-navigation" class="nav-list" data-visible="false">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="page thankyou-page">
+
+    <section class="thankyou-hero">
+        <h1>🎉 Application Received!</h1>
+        <p>Thank you for applying to join the OtaCity Chamber of Commerce.</p>
+    </section>
+
+    <section id="results" class="application-card"></section>
+
+    <div class="thankyou-actions">
+        <a href="index.html" class="btn">Return Home</a>
+        <a href="directory.html" class="btn">View Member Directory</a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="page footer-grid">
+        <div>
+            <h2>Contact</h2>
+            <p>
+                OtaCity Chamber of Commerce<br>
+                Obafemi Awolowo Way, Ota<br>
+                +234 803 222 7474<br>
+                info@adoodootalg.org.ng
+            </p>
+        </div>
+
+        <div class="footer-meta">
+            <p>WDD 231 – Emmanuel Adejare Ariyo</p>
+            <p>Last Updated: <span id="last-modified"></span></p>
+            <p>&copy; <span id="current-year"></span> OtaCity Chamber</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
