@@ -584,17 +584,6 @@ p {
     background: var(--color-primary);
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* JOIN PAGE DESKTOP LAYOUT */
@@ -710,6 +699,7 @@ p {
     background: #eef6ff;
     padding: 1rem;
     border-left: 5px solid #0077cc;
+    min-height: 4.5rem;
 }
 
 /* GRID AREAS LAYOUT */
