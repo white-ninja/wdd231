@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover | OtaCity Chamber of Commerce</title>
-    <meta name="description" content="Discover the benefits of joining the OtaCity Chamber of Commerce. Connect with local businesses and grow your network.">
+    <meta name="description"
+        content="Discover the benefits of joining the OtaCity Chamber of Commerce. Connect with local businesses and grow your network.">
     <meta name="author" content="Emmanuel Adejare Ariyo">
 
-     <!-- Favicon -->   
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <!-- Open Graph (Facebook) -->
@@ -23,7 +25,7 @@
     <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="styles/normalize.css">
 
-     <!-- Fallback for no JavaScript -->
+    <!-- Fallback for no JavaScript -->
     <noscript>
         <link rel="stylesheet" href="styles/small.css">
         <link rel="stylesheet" href="styles/larger.css">
@@ -36,42 +38,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 
-    <!-- Join page JS -->
-    <script src="scripts/join.js" defer></script>
-    <!-- Home page JS -->
-    <script src="scripts/home.js" defer></script>
+    <!-- Discover page JS -->
+    <script src="scripts/discover.js" type="module" defer></script>
 </head>
 
 <body>
     <header class="site-header">
-    <div class="page">
-        <div class="branding">
-            <a class="brand" href="index.html">
-                <img class="brand__logo" src="images/favicon.svg" alt="OtaCity Chamber logo" width="48" height="48">
-                <span class="brand__name">OtaCity Chamber</span>
-            </a>
-            <p class="brand__tagline">Connecting local businesses and our community</p>
+        <div class="page">
+            <div class="branding">
+                <a class="brand" href="index.html">
+                    <img class="brand__logo" src="images/favicon.svg" alt="OtaCity Chamber logo" width="48" height="48">
+                    <span class="brand__name">OtaCity Chamber</span>
+                </a>
+                <p class="brand__tagline">Connecting local businesses and our community</p>
+            </div>
+
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation"
+                    aria-label="Open menu">
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                </button>
+
+                <ul id="primary-navigation" class="nav-list" data-visible="false">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="thankyou.html">Thank You</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <nav class="main-nav">
-            <button class="nav-toggle"
-                aria-expanded="false"
-                aria-controls="primary-navigation"
-                aria-label="Open menu">
-                <span class="nav-toggle__bar"></span>
-                <span class="nav-toggle__bar"></span>
-                <span class="nav-toggle__bar"></span>
-            </button>
+    <main class="discover-page">
 
-            <ul id="primary-navigation" class="nav-list" data-visible="false">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="thankyou.html">Thank You</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+        <section id="visitMessage" class="visit-msg"></section>
+
+        <section class="discover-grid" id="discoverGrid">
+            <!-- Cards injected by JS -->
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="page footer-grid">
+
+            <div>
+                <h2>Contact</h2>
+                <p>
+                    OtaCity Chamber of Commerce<br>
+                    Obafemi Awolowo Way, Ota<br>
+                    +234 803 222 7474<br>
+                    info@adoodootalg.org.ng
+                </p>
+            </div>
+
+            <div class="footer-meta">
+                <p>WDD 231 – Emmanuel Adejare Ariyo</p>
+                <p>Last Updated: <span id="last-modified"></span></p>
+                <p>&copy; <span id="current-year"></span> OtaCity Chamber</p>
+            </div>
+
+        </div>
+    </footer>
 </body>
+
 </html>
