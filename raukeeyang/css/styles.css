@@ -1,0 +1,961 @@
+:root {
+    --green-dark: #2F6F3E;
+    --green: #4CAF50;
+    --cream: #F5F5F0;
+    --brown: #8D6E63;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    background: var(--cream);
+}
+
+header {
+    background: var(--green-dark);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    word-break: break-word;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    order: 3;
+    width: 100%;
+}
+
+#menuBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+#menuBtn:hover {
+    transform: scale(1.1);
+}
+
+#menuBtn.active {
+    transform: rotate(90deg);
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    background: var(--green-dark);
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background 0.3s ease, padding-left 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
+}
+
+nav a:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width:768px) {
+    header {
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
+
+    .logo-header {
+        flex: 0 1 auto;
+        min-width: unset;
+    }
+
+    .logo-header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        order: unset;
+        width: auto;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    #menuBtn {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        gap: 0;
+        border: none;
+        background: transparent;
+        width: auto;
+        animation: none;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        padding: 0.5rem 1.5rem;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        background: transparent;
+        border-bottom: 3px solid white;
+        padding-left: 1.5rem;
+    }
+
+    nav a:active {
+        background: transparent;
+    }
+}
+
+section {
+    padding: 70px 0;
+}
+
+.hero,
+.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../images/farm-bg.webp") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+}
+
+.hero h2,
+.page-hero h1 {
+    font-size: 1.8rem;
+    margin: 0 0 1rem 0;
+}
+
+.hero-illustration {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 14px;
+    margin: 1.5rem auto 0;
+    display: block;
+    object-fit: cover;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--brown);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #6D4C41;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+@media (min-width:768px) {
+    .hero {
+        padding: 5rem 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+#productContainer,
+#featuredContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+body.thankyou {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.thankyou main {
+    flex: 1;
+}
+
+.thank-you-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.9), rgba(47, 111, 62, 0.9)), url("../images/farm-bg.webp") center/cover no-repeat;
+    color: white;
+    margin-top: 2rem;
+}
+
+.thank-you-message h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.thank-you-message p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thank-you-message .btn {
+    margin-top: 2rem;
+}
+
+@media (min-width:768px) {
+    .thank-you-message {
+        padding: 5rem 2rem;
+    }
+
+    .thank-you-message h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.about {
+    padding: 3rem 1rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about h2 {
+    color: var(--green-dark);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 15px auto;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+@media (min-width:768px) {
+    .about {
+        padding: 5rem 2rem;
+    }
+
+    .about h2 {
+        font-size: 2.2rem;
+    }
+}
+
+.why-us {
+    background: white;
+    text-align: center;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-grid div {
+    padding: 25px;
+    border-radius: 10px;
+    background: #f4f4f4;
+    transition: 0.3s;
+}
+
+.why-grid div:hover {
+    transform: translateY(-6px);
+}
+
+.testimonials {
+    background: #1f3d2b;
+    color: white;
+    text-align: center;
+}
+
+.testimonials blockquote {
+    max-width: 700px;
+    margin: 30px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonials span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.cta {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/farm-bg.webp")center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+.featured-products {
+    padding: 70px 20px;
+    background: #f7fbf7;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #1b5e20;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    opacity: 0.8;
+    color: #555;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-card h3 {
+    color: #2e7d32;
+    margin-top: 15px;
+}
+
+.product-card p {
+    padding: 0 15px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* PRODUCTS PAGE HERO */
+.page-hero {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+/* PRODUCT SECTIONS */
+.products-section {
+    padding: 70px 0;
+}
+
+.alt-bg {
+    background: #f5f8f5;
+}
+
+/* CATALOGUE GRID */
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* PRODUCT CARD */
+.catalogue-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.catalogue-card:hover {
+    transform: translateY(-8px);
+}
+
+.catalogue-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.catalogue-card h3 {
+    padding: 15px 15px 5px;
+    color: #2e7d32;
+}
+
+.catalogue-card p {
+    padding: 0 15px;
+}
+
+.catalogue-card ul {
+    text-align: left;
+    padding: 10px 30px;
+}
+
+/* CONTACT PAGE */
+.contact-section {
+    padding: 70px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* CONTACT INFO */
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* CONTACT FORM */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE NAV */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+#menuBtn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #menuBtn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        padding: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+.form-page {
+    padding: 2rem 1rem;
+}
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* WEATHER SECTION */
+.weather-section {
+    padding: 70px 0;
+}
+
+.weather-location {
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.current-weather,
+.forecast-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.current-weather h3,
+.forecast-section h3 {
+    color: var(--green-dark);
+    margin-top: 0;
+    text-align: center;
+}
+
+.weather-display {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.weather-info {
+    flex: 1;
+    text-align: left;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--green-dark);
+    margin: 0;
+}
+
+.description {
+    font-size: 1.3rem;
+    color: var(--green);
+    margin: 0.3rem 0;
+    text-transform: capitalize;
+}
+
+.details {
+    margin: 0.5rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.forecast-card {
+    background: linear-gradient(135deg, var(--cream) 0%, white 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(79, 195, 247, 0.2);
+    transition: all 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(47, 111, 62, 0.15);
+}
+
+.forecast-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--green-dark);
+    font-size: 0.9rem;
+}
+
+.forecast-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem auto;
+    display: block;
+}
+
+.forecast-temp {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--green);
+    margin: 0.5rem 0;
+}
+
+.forecast-condition {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.3rem 0;
+    text-transform: capitalize;
+}
+
+.forecast-detail {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0.2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .weather-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .weather-info {
+        text-align: center;
+    }
+
+    .temperature {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .forecast-card {
+        padding: 1rem;
+    }
+
+    .forecast-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.page-intro h2 {
+    font-size: 1.8rem;
+    color: var(--green-dark);
+    margin: 0 0 1rem 0;
+}
+
+.page-intro p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.form-page form {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.form-page label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: var(--green-dark);
+}
+
+.form-page input,
+.form-page textarea {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-page input:focus,
+.form-page textarea:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.form-page button {
+    margin-top: 1rem;
+}
+
+@media (min-width:768px) {
+    .form-page {
+        padding: 3rem 2rem;
+    }
+
+    .page-intro {
+        padding: 3rem 2rem;
+    }
+
+    .page-intro h2 {
+        font-size: 2.2rem;
+    }
+
+    .form-page form {
+        padding: 3rem 2rem;
+    }
+}
+
+.site-footer {
+    background: var(--green-dark);
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-footer h2 {
+    font-size: 1.3rem;
+    margin: 0 0 1rem 0;
+}
+
+.site-footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-meta {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+}
+
+@media (min-width:768px) {
+    .site-footer {
+        padding: 3rem 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .footer-meta {
+        grid-column: 1 / -1;
+        border-top: none;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    section {
+        padding: 50px 0;
+    }
+
+    .cta h2 {
+        font-size: 1.6rem;
+    }
+}

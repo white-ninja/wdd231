@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Raukeeyang Integrated Farm to place orders, make enquiries, or partner with us.">
+    <meta name="keywords" content="Raukeeyang Farm contact, order livestock, farm produce inquiry, Nigerian farm">
+    <meta name="author" content="Raukeeyang Integrated Farm">
+    <title>Contact | Raukeeyang Integrated Farm</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <!-- Open Graph (Facebook) -->
+    <meta property="og:title" content="Contact Raukeeyang Integrated Farm">
+    <meta property="og:description"
+        content="Contact Raukeeyang Integrated Farm to place orders, make enquiries, or partner with us.">
+    <meta property="og:image" content="images/farm-bg.webp">
+    <meta property="og:url" content="https://raukeeyangfarm.com/contact.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Raukeeyang Integrated Farm">
+    <meta name="twitter:description"
+        content="Contact Raukeeyang Integrated Farm to place orders, make enquiries, or partner with us.">
+    <meta name="twitter:image" content="images/farm-bg.webp">
+
+    <!-- Instagram -->
+    <meta property="instagram:title" content="Raukeeyang Integrated Farm">
+    <meta property="instagram:description"
+        content="Follow us for fresh farm updates, organic produce, and sustainable farming practices.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Contact Form JS -->
+    <script type="module" src="js/form.js" defer></script>
+    <!-- Weather Widget JS -->
+    <script type="module" src="js/weather.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-header">
+            <img src="images/logo.svg" alt="Raukeeyang Integrated Farm Logo" class="logo">
+            <h1>Raukeeyang Integrated Farm</h1>
+        </div>
+        <nav>
+            <button id="menuBtn">☰</button>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact Raukeeyang Integrated Farm</h1>
+                <p>Have questions or want to place an order? Send us a message today.</p>
+                <img src="images/farm-bg.webp" alt="Raukeeyang Integrated Farm landscape" class="hero-illustration"
+                    decoding="async">
+            </div>
+        </section>
+
+        <!-- CONTACT GRID -->
+        <section class="contact-section">
+            <div class="container contact-grid">
+
+                <!-- CONTACT INFO -->
+                <div class="contact-info">
+                    <h2>Farm Contact Details</h2>
+                    <p><strong>Address:</strong><br>
+                        22–24 Bolarinwa Opesha Street, RCC Bus Stop<br>
+                        Ota, Ogun State, Nigeria</p>
+
+                    <p><strong>Phone:</strong><br>
+                        +234 901 166 3980<br>
+                        +234 703 205 4386</p>
+
+                    <p><strong>Email:</strong><br>
+                        RaukeeyangIntegratedFarm@gmail.com</p>
+
+                    <p><strong>Business Hours:</strong><br>
+                        Mon – Sat: 8:00am – 6:00pm</p>
+                </div>
+
+
+                <!-- CONTACT FORM -->
+                <div class="contact-form">
+                    <h2>Send an Enquiry</h2>
+
+                    <form action="thankyou.html" method="GET" id="enquiryForm">
+
+                        <label>Full Name*</label>
+                        <input type="text" name="name" required>
+
+                        <label>Email Address*</label>
+                        <input type="email" name="email" required>
+
+                        <label>Phone Number*</label>
+                        <input type="tel" name="phone" required>
+
+                        <label>Product of Interest</label>
+                        <select name="product">
+                            <option>Poultry</option>
+                            <option>Goats</option>
+                            <option>Catfish</option>
+                            <option>Vegetables</option>
+                            <option>Eggs</option>
+                            <option>Animal Feed</option>
+                            <option>General Enquiry</option>
+                        </select>
+
+                        <label>Your Message*</label>
+                        <textarea name="message" rows="5" required></textarea>
+
+                        <button type="submit" class="btn">Send Enquiry</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WEATHER SECTION -->
+        <section class="weather-section alt-bg">
+            <div class="container">
+                <h2>Farm Location Weather</h2>
+                <p class="weather-location">Ota, Ogun State, Nigeria</p>
+
+                <div class="weather-grid">
+                    <div class="current-weather">
+                        <h3>Current Weather</h3>
+                        <div id="currentWeather" class="weather-display">
+                            <p>Loading weather data...</p>
+                        </div>
+                    </div>
+
+                    <div class="forecast-section">
+                        <h3>5-Day Forecast</h3>
+                        <div id="forecastContainer" class="forecast-grid">
+                            <p>Loading forecast...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="page footer-grid">
+            <div>
+                <h2>Contact</h2>
+                <p>
+                    Raukeeyang Integrated Farm<br>
+                    22–24 Bolarinwa Opesha Street, RCC Bus Stop<br>
+                    Ota, Ogun State, Nigeria<br>
+                    Phone: +234 901 166 3980<br>
+                    Phone: +234 703 205 4386<br>
+                    Email: RaukeeyangIntegratedFarm@gmail.com
+                </p>
+            </div>
+
+            <div class="footer-meta">
+                <p>© <span id="current-year"></span> Raukeeyang Integrated Farm. All rights reserved.</p>
+                <p>Fresh Livestock • Quality Produce • Trusted Farming</p>
+                <p>Last Updated: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

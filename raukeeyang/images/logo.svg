@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Circular background -->
+  <circle cx="100" cy="100" r="95" fill="#F0E68C" stroke="#228B22" stroke-width="2"/>
+  
+  <!-- Barn structure -->
+  <rect x="70" y="85" width="60" height="60" fill="#8B4513" stroke="#654321" stroke-width="1.5"/>
+  
+  <!-- Roof -->
+  <polygon points="65,85 100,55 135,85" fill="#D2691E" stroke="#8B4513" stroke-width="1.5"/>
+  
+  <!-- Door -->
+  <rect x="90" y="105" width="20" height="30" fill="#654321"/>
+  <circle cx="97" cy="120" r="2" fill="#FFD700"/>
+  
+  <!-- Windows -->
+  <rect x="75" y="95" width="12" height="12" fill="#87CEEB"/>
+  <rect x="113" y="95" width="12" height="12" fill="#87CEEB"/>
+  
+  <!-- Left leaf -->
+  <ellipse cx="55" cy="75" rx="8" ry="15" fill="#228B22" transform="rotate(-45 55 75)"/>
+  
+  <!-- Right leaf -->
+  <ellipse cx="145" cy="75" rx="8" ry="15" fill="#32CD32" transform="rotate(45 145 75)"/>
+  
+  <!-- Center top leaf -->
+  <ellipse cx="100" cy="45" rx="7" ry="14" fill="#228B22"/>
+  
+  <!-- Ground -->
+  <ellipse cx="100" cy="160" rx="45" ry="12" fill="#8B7355"/>
+</svg>

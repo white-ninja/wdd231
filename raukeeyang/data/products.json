@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Broiler Chickens",
+    "category": "livestock",
+    "price": "₦6,000",
+    "image": "images/poultry.webp",
+    "description": "Healthy broiler chickens raised with quality feed."
+  },
+  {
+    "id": 2,
+    "name": "Layers (Egg Birds)",
+    "category": "livestock",
+    "price": "₦7,500",
+    "image": "images/eggs.webp",
+    "description": "High egg-producing layer birds."
+  },
+  {
+    "id": 3,
+    "name": "Goats",
+    "category": "livestock",
+    "price": "₦45,000",
+    "image": "images/goat.webp",
+    "description": "Strong and healthy goats for meat and breeding."
+  },
+  {
+    "id": 4,
+    "name": "Catfish",
+    "category": "livestock",
+    "price": "₦3,500/kg",
+    "image": "images/catfish.webp",
+    "description": "Fresh farm-raised catfish."
+  },
+  {
+    "id": 5,
+    "name": "Turkey",
+    "category": "livestock",
+    "price": "₦25,000",
+    "image": "images/poultry.webp",
+    "description": "Well-fed turkeys available."
+  },
+  {
+    "id": 6,
+    "name": "Fresh Eggs (Crate)",
+    "category": "produce",
+    "price": "₦4,500",
+    "image": "images/eggs.webp",
+    "description": "Farm-fresh eggs daily."
+  },
+  {
+    "id": 7,
+    "name": "Fresh Milk",
+    "category": "produce",
+    "price": "₦2,000/L",
+    "image": "images/vegetables.webp",
+    "description": "Pure natural cow milk."
+  },
+  {
+    "id": 8,
+    "name": "Tomatoes",
+    "category": "produce",
+    "price": "₦3,000/basket",
+    "image": "images/vegetables.webp",
+    "description": "Fresh organic tomatoes."
+  },
+  {
+    "id": 9,
+    "name": "Pepper",
+    "category": "produce",
+    "price": "₦2,500/basket",
+    "image": "images/vegetables.webp",
+    "description": "Hot fresh peppers from the farm."
+  },
+  {
+    "id": 10,
+    "name": "Maize",
+    "category": "produce",
+    "price": "₦1,500/bag",
+    "image": "images/vegetables.webp",
+    "description": "Quality maize harvest."
+  },
+  {
+    "id": 11,
+    "name": "Spinach",
+    "category": "produce",
+    "price": "₦1,200/bundle",
+    "image": "images/vegetables.webp",
+    "description": "Fresh green vegetables."
+  },
+  {
+    "id": 12,
+    "name": "Cabbage",
+    "category": "produce",
+    "price": "₦1,500",
+    "image": "images/vegetables.webp",
+    "description": "Healthy organic cabbage."
+  },
+  {
+    "id": 13,
+    "name": "Yam Tubers",
+    "category": "produce",
+    "price": "₦3,000",
+    "image": "images/vegetables.webp",
+    "description": "Fresh harvested yam."
+  },
+  {
+    "id": 14,
+    "name": "Sweet Potatoes",
+    "category": "produce",
+    "price": "₦2,000",
+    "image": "images/vegetables.webp",
+    "description": "Naturally grown sweet potatoes."
+  },
+  {
+    "id": 15,
+    "name": "Plantain",
+    "category": "produce",
+    "price": "₦3,500/bunch",
+    "image": "images/vegetables.webp",
+    "description": "Fresh plantain bunches."
+  },
+  {
+    "id": 16,
+    "name": "Carrots",
+    "category": "produce",
+    "price": "₦1,800/bundle",
+    "image": "images/vegetables.webp",
+    "description": "Fresh and crunchy carrots."
+  }
+]
